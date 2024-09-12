@@ -1,186 +1,181 @@
-*{
-    margin: 0px;
+/* Universal Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-#main{
-    display: flex;
-}
-.nav{
-    width: 25%;
-    background-color: rgb(27, 25, 25);
-    height: 100vh;  
-    color: rgb(255, 255, 255);
-}
-.searchtag{
+
+.searchtag {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* background-color: blue; */
+    flex-direction: column;
+    background-color: rgb(185, 0, 0);
     height: 100px;
 }
-input[type=search]
-{
-    height: 30px;
-    width: 250px;
-    border-radius: 10px;
-    border: 2px solid;
-    border-color: black;     
+
+.nav {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    /* background-color: #f0f0f0; */
 }
 
-input[type=search]:focus
-{
-    transition: 1s ease-in-out;
-    height: 30px;
-    width: 400px;
-    border-radius: 10px;
-    border: 2px solid;
-    border-color: black;     
+.image {
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: bisque; */
 }
 
-
-.content{
-    background-color: azure;
+.image img {
+    height: 150px;
+    width: 150px;
+}
+.navig{
     width: 80%;
+    /* background-color: beige;/ */
 }
-.images{
+
+.navig ul {
+    
+    /* background-color: black; */
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+}
+
+.navig ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.content {
+    background-color: azure;
+    width: 100%;
+}
+
+.images {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     font-size: 28px;
 }
-.shopping{
+
+/* Shopping Section */
+.shopping {
    width: 100%;
    display: flex;
    flex-wrap: wrap;
    justify-content: center;
    align-items: center;
    margin-top: 30px;
-    gap: 30px;
-   /* background-color: aquamarine; */
+   gap: 30px;
 }
-.shopping h4{
-    background-color: rgb(151, 145, 145);
+
+.shopping h4 {
+    background-color: rgba(141, 128, 128, 0.718);
     color: rgb(243, 0, 0);
     font-size: 35px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-.img1{
+/* Image Styling */
+.img1, .img2, .img3, .img4 {
     border-radius: 10px;
     height: 250px;
     display: flex;
     width: 500px;
+    background-position: center;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: transform 0.5s ease-in-out; /* Smooth scaling transition */
+}
+
+.img1:hover, .img2:hover, .img3:hover, .img4:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.img1 {
     background-image: url("./images/1.jpg");
-    background-position: center;
-    background-size: cover ;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}      
-.img1:hover{
-    
- 
-    background-image: url("./1.jpg");
-    background-position: center;
-    background-size: cover ;
-    justify-content: center;
-    /* align-items: center; */
-    
-    background-color: rgb(0, 0, 0);   
 }
-.img2{
-    border-radius: 10px;
-    height: 250px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 500px;
-    background-image: url(".//images/2.jpg");
-    background-position: center;
-    background-size: cover ;
-    flex-direction: column;
-}
-.img2:hover{
- 
-    background-image: url("./2.jpg");
-    background-position: center;
-    background-size: cover ;
 
+.img2 {
+    background-image: url("./images/2.jpg");
 }
-.img3{
-    border-radius: 10px;
-    height: 250px;
-    display: flex;
-    width: 500px;
-    background-image: url(".//images/3.jpg");
-    background-position: center;
-    background-size: cover ;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
 
+.img3 {
+    background-image: url("./images/3.jpg");
 }
-.img3:hover{
-  
-    display: flex; 
-    background-image: url("./3.jpg");
-    background-position: center;
-    background-size: cover ;
-  
-}
-.img4{
-    border-radius: 10px;
-    height: 250px;
-    display: flex;
-    width: 500px;
-    background-image: url(".//images/4.jpg");
-    background-position: center;
-    background-size: cover ;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-.img4:hover{
 
-    background-image: url("./4.jpg");
-    background-position: center;
-    background-size: cover ;
-    
+.img4 {
+    background-image: url("./images/4.jpg");
 }
-@media screen and (max-width:850px) {
 
-    .nav{
-        width: 100%;
-        height: 200px;
+/* Media Queries */
+
+/* For screens smaller than 850px */
+@media screen and (max-width: 850px) {
+    .nav {
+        /* background-color: antiquewhite; */
+        /* flex-direction: column; */
+        height: auto;
+        align-items: center;
     }
-    #main{
+
+    .image {
+        width: 50%;
+        text-align: center;
+    }
+    .navig{
         display: flex;
-        flex-direction: column;
-    }
-    .content{
-        background-color: azure;
         width: 100%;
-        height: 100vh;
+        /* background-color: aquamarine; */
+        justify-content: center;
+    }
+    .navig ul {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        display: none;
+    }
+
+    .navig ul.show {
+        display: flex;
+    }
+
+    .menu-icon {
+        display: block;
     }
 }
-@media screen and (max-width:550px) {
 
-    .img1{
+/* For screens smaller than 550px */
+@media screen and (max-width: 550px) {
+    .img1, .img2, .img3, .img4 {
         width: 80%;
     }
-    .img2{
-        width: 80%;
-    } 
-    .img3{
-        width: 80%;
-    } 
-    .img4{
-        width: 80%;
-    }
-    .shopping h4{
+
+    .shopping h4 {
         background-color: rgb(151, 145, 145);
         color: rgb(243, 0, 0);
         font-size: 25px;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    .content {
+        width: 100%;
     }
 }
