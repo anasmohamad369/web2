@@ -35,8 +35,8 @@
 }
 
 .image img {
-    height: 150px;
-    width: 150px;
+    height: 100px;
+    width: 100px;
 }
 .navig{
     width: 80%;
@@ -70,9 +70,10 @@
 
 .images {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
     flex-direction: column;
+ 
     font-size: 28px;
 }
 
@@ -144,8 +145,9 @@
     }
 
     .image {
-        width: 50%;
-        text-align: center;
+        width: 30%;
+        display: flex;
+        
     }
     .navig{
         display: flex;
@@ -174,7 +176,10 @@
     .img1, .img2, .img3, .img4 {
         width: 80%;
     }
-
+.image img{
+    height: 50px;
+    width: 50px;
+}
     .shopping h4 {
         background-color: rgb(151, 145, 145);
         color: rgb(243, 0, 0);
